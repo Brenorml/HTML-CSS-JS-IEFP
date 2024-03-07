@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS - Arrays bidimensionais</h2>
+    <script>
+        const aluno = [
+          ['Breno', 'M', 12.5, 16.7, 13.0],
+          ['Patricia', 'F', 15.3, 17.8, 14.5],
+          ['Juninho', 'M', 14.7, 16.7, 17.5, 18.4, 13.0]
+        ];
+
+        console.table(aluno);
+
+        for(let i = 0; i < aluno.length; i++){
+            for(let j = 0; j < aluno[i].length; j++){
+                document.write(aluno[i][j]);
+                if(j == aluno[i].length - 1)
+                    document.write('<br>');
+                else
+                    document.write(' - ');
+            }
+        }
+    </script>
+</body>
+</html>

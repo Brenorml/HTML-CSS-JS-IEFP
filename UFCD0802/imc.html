@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        const calcImc = function(p, h){
+            return p / (h * h);
+        };
+        const linha = function(){
+            document.write('<br>');
+        };
+        const mostra = function(frase){
+            document.write(frase);
+            linha();
+        };
+        let peso = parseFloat(prompt('Insira o peso: '));
+        let altura = parseFloat(prompt('Insira a altura: '));
+
+        mostra('IMC: ' + calcImc(peso, altura).toFixed(2));
+        linha();
+        if(calcImc(peso, altura) < 18.5){
+            mostra('Abaixo do peso');
+        }
+        else if(calcImc(peso, altura) < 24.90){
+            mostra('Peso normal');
+        }
+        else if(calcImc(peso, altura) < 29.90){
+            mostra('Pré-obesidade');
+        }
+        else if(calcImc(peso, altura) < 34.90){
+            mostra('Obesidade Grau 1');
+        }
+        else if(calcImc(peso, altura) < 39.90){
+            mostra('Obesidade Grau 2');
+        }
+        else{
+            mostra('Obesidade Grau 3');
+        }
+    </script>
+</body>
+</html>

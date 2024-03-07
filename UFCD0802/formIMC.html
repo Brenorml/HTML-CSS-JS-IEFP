@@ -1,0 +1,122 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calcular IMC</title>
+<script>
+    function condicao(valor) {
+        if (isNaN(valor)) {
+            alert("Atenção: utilize apenas números, separando com ponto (não utilize vírgula)");
+        }
+    }
+</script>
+<script>
+    function calcula() {
+        var peso = document.formulario.pso.value;
+        var altura = document.formulario.alt.value;
+        imc = peso / (altura * altura);
+        document.formulario.resultado.value = imc;
+        if (imc < 16)
+            document.formulario.comentario.value = ("Baixo peso Grau III");
+        if (imc >= 16 && imc < 17)
+            document.formulario.comentario.value = ("Baixo peso Grau II");
+        if (imc >= 17.00 && imc < 18.50)
+            document.formulario.comentario.value = ("Baixo peso Grau I");
+        if (imc >= 18.50 && imc < 25)
+            document.formulario.comentario.value = ("Peso ideal");
+        if (imc >= 25 && imc < 30)
+            document.formulario.comentario.value = ("Sobrepeso");
+        if (imc >= 30 && imc < 35)
+            document.formulario.comentario.value = ("Obesidade Grau I");
+        if (imc >= 35 && imc < 40)
+            document.formulario.comentario.value = ("Obesidade Grau II");
+        if (imc >= 40)
+            document.formulario.comentario.value = ("Obesidade Grau III");
+    }
+</script>
+
+<head>
+
+</head>
+
+<body style="margin-left:10px">
+
+    <form name="formulario">
+        <p><strong>Calcular IMC</strong> (adultos)</p>
+        <p>Seu peso <input type="number" name="pso" size="5" maxlength="7" onBlur="condicao(this.value)" /><br \>
+            Exemplo: para 80 quilos e 300 gramas digite <strong>80.300</strong></p>
+        <p>Sua altura <input type="number" name="alt" size="5" maxlength="4" onBlur="condicao(this.value)" /><br \>
+            Exemplo: para 1 metro e 70 cent&iacute;metros digite <strong>1.70</strong></p>
+        <p><input type="button" value="Clique para calcular IMC - &Iacute;ndice de Massa Corporal" onclick="calcula()"
+                name="button" /></p>
+        <p>Seu IMC &eacute;: <input type="text" name="resultado" size="20" maxlength="20" /><br \>
+            Situa&ccedil;&atilde;o: <input type="text" name="comentario" size="20" maxlength="20" /></p>
+    </form>
+    <p><strong>Tabela de resultados</strong></p>
+    <table width="300" border="1">
+        <tr>
+            <td>IMC</td>
+            <td>Categoria</td>
+        </tr>
+        <tr>
+            <td>abaixo de 16,00</td>
+            <td>Baixo peso Grau III</td>
+        </tr>
+        <tr>
+            <td>16,00 a 16,99</td>
+            <td>Baixo peso Grau II</td>
+        </tr>
+        <tr>
+            <td>17,00 a 18.49</td>
+            <td>Baixo peso Grau I</td>
+        </tr>
+        <tr>
+            <td>18,50 a 24,99</td>
+            <td>Peso ideal</td>
+        </tr>
+        <tr>
+            <td>25,00 a 29,99</td>
+            <td>Sobrepeso</td>
+        </tr>
+        <tr>
+            <td>30,00 a 34,99</td>
+            <td>Obesidade Grau I</td>
+        </tr>
+        <tr>
+            <td>35,00 a 39,99</td>
+            <td>Obesidade Grau II</td>
+        </tr>
+        <tr>
+            <td>40,0 e acima</td>
+            <td>Obesidade Grau III</td>
+        </tr>
+    </table>
+    <table width="332" border="0">
+        <tr>
+            <td width="326">
+                <p>Outros cálculos de IMC: <a href="http://indicedemassacorporal.com/imc-masculino.html"
+                        target="_blank">masculino</a> <a href="http://indicedemassacorporal.com/imc-feminino.html"
+                        target="_blank">feminino</a> <a href="http://indicedemassacorporal.com/imc-criancas.html"
+                        target="_blank">crianças</a> <a href="http://indicedemassacorporal.com/imc-jovens.html"
+                        target="_blank">jovens</a> <a href="http://indicedemassacorporal.com/imc-idosos.html"
+                        target="_blank">idosos</a> <a href="http://indicedemassacorporal.com/imc-gestantes.html"
+                        target="_blank">gestantes</a> - <a
+                        href="http://indicedemassacorporal.com/indice-de-massa-corporal.html" target="_blank">O que é
+                        IMC</a></p>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-11610232-4");
+            pageTracker._trackPageview();
+        } catch (err) { }</script>
+
+        // source: https://indicedemassacorporal.com/calcular-imc.html
+</body>
+
+</html>
