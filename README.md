@@ -6,7 +6,7 @@
 ### UFCD-0804 - ALGORITMOS
 ### UFCD-0811 - ANÁLISE DE SISTEMAS
 
-Exercícios realizados nas disciplinas UFCD0802, UFCD0804 e UFCD0811 no curso técnico de programação do IEFP.
+Exercícios e aplicativos realizados nas disciplinas UFCD0802, UFCD0804 e UFCD0811 no curso técnico de programação do IEFP.
 
 ### Linguagens:
 
